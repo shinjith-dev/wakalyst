@@ -9,10 +9,18 @@
     "dev": "turbo run dev",
     "build": "turbo run build",
     "clean": "turbo run clean && rm -rf node_modules",
-    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\" --ignore-path .gitignore"
+    "lint": "eslint . --fix",
+    "format": "prettier . --write",
+    "prepare": "husky"
   },
   "devDependencies": {
-    "prettier": "^3.1.1",
+    "eslint": "^8.57.0",
+    "eslint-config-expo": "~8.0.1",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.4.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.0.0",
+    "prettier": "^3.5.3",
     "turbo": "^2.5.3"
   },
   "packageManager": "yarn@1.22.19",

@@ -8,7 +8,7 @@
 	"main": "src/index.ts",
 	"compatibility_date": "2025-05-21",
 	"observability": {
-		"enabled": true
+		"enabled": true,
 	},
 	/**
 	 * Smart Placement
@@ -42,7 +42,7 @@
 	"kv_namespaces": [
 		{
 			"binding": "AUTH_STATES",
-			"id": "c52b4c6f01124c848d4050597a5cf020"
-		}
-	]
+			"id": "c52b4c6f01124c848d4050597a5cf020",
+		},
+	],
 }

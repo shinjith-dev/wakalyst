@@ -1,23 +1,25 @@
-import { StyleSheet, Text, View } from "react-native";
+import { THEME } from "@waka/config";
+import { Text, useColorScheme, View } from "react-native";
 
-export default function Native() {
+export default function Index() {
+  const theme = useColorScheme();
+
   return (
-    <View style={styles.container}>
-      <Text style={styles.header}>Native</Text>
+    <View
+      style={{
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: THEME.color[theme].background,
+      }}
+    >
+      <Text
+        style={{
+          color: THEME.color[theme].foreground,
+        }}
+      >
+        Edit app/index.tsx to edit this screen.
+      </Text>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  header: {
-    fontWeight: "bold",
-    marginBottom: 20,
-    fontSize: 36,
-  },
-});

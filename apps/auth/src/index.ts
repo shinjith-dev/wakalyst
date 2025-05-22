@@ -2,7 +2,7 @@ import { storeState, validateState } from './lib';
 
 const CALLBACK_URL = 'https://shinjith.dev/callback';
 const PERMISSION_SCOPE = [];
-const WAKATIME_BASE_URL = "https://wakatime.com/oauth"
+const WAKATIME_BASE_URL = 'https://wakatime.com/oauth';
 
 export default {
 	async fetch(request: Request, env: Env, _ctx: ExecutionContext): Promise<Response> {
@@ -33,7 +33,7 @@ export default {
 					redirect_uri: PERMISSION_SCOPE,
 					grant_type: 'authorization_code',
 					client_id: env.WAKATIME_CLIENT_ID,
-					client_secret: env.WAKATIME_CLIENT_SECRET
+					client_secret: env.WAKATIME_CLIENT_SECRET,
 				};
 
 				const tokenRequest = await fetch(`${WAKATIME_BASE_URL}/token`, {
@@ -57,7 +57,7 @@ export default {
 				const body = {
 					token: reqBody.get('token') || '',
 					client_id: env.WAKATIME_CLIENT_ID,
-					client_secret: env.WAKATIME_CLIENT_SECRET
+					client_secret: env.WAKATIME_CLIENT_SECRET,
 				};
 
 				const revokeRequest = await fetch(`${WAKATIME_BASE_URL}/token`, {
