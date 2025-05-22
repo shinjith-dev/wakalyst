@@ -27,7 +27,6 @@
     "react-native-web": "~0.19.13"
   },
   "devDependencies": {
-    "@waka/tsconfig": "*",
     "@babel/core": "^7.23.7",
     "@expo/webpack-config": "19.0.1",
     "@types/react": "~18.3.12",
